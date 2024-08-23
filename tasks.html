@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Gérez vos Tâches</title>
+    <style>
+        /* Styles pour la barre de navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .navbar-left,
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-title {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.2);
+        }
+
+        .navbar img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Style pour le contenu de la page */
+        .task-manager {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-manager h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .task-manager form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .task-manager input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .task-manager button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-manager button:hover {
+            background-color: #0056b3;
+        }
+
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-list button {
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-list button:hover {
+            background-color: darkred;
+        }
+
+        /* Style pour le pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img src="accueil.png"></a>
+                <a href="information.html"><img src="information.png"></a>
+            </div>
+            <h1 class="navbar-title">Gérez vos Tâches</h1>
+            <div class="navbar-right">
+                <a href="account.html"><img src="utilisateur.png"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="task-manager">
+            <h2>Vos Tâches</h2>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Entrez une nouvelle tâche">
+                <button type="submit">Ajouter</button>
+            </form>
+            <ul id="taskList" class="task-list">
+                <!-- Les tâches ajoutées apparaîtront ici -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gérez vos Tâches. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('taskForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le formulaire de se soumettre
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                const taskList = document.getElementById('taskList');
+
+                // Créer un nouvel élément de liste pour la tâche
+                const li = document.createElement('li');
+                li.textContent = taskText;
+
+                // Ajouter un bouton pour supprimer la tâche
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Supprimer';
+                deleteButton.addEventListener('click', function() {
+                    taskList.removeChild(li);
+                });
+
+                li.appendChild(deleteButton);
+                taskList.appendChild(li);
+
+                // Effacer le champ de saisie
+                taskInput.value = '';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Gérer votre Compte</title>
+    <style>
+        /* Styles pour la barre de navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .navbar-left,
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-title {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.2);
+        }
+
+        .navbar img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Style pour le contenu de la page */
+        .account-management {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .account-management h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .account-management label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .account-management input[type="text"],
+        .account-management input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .account-management button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .account-management button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style pour le pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img src="accueil.png"></a>
+                <a href="information.html"><img src="information.png"></a>
+            </div>
+            <h1 class="navbar-title">Gérer votre Compte</h1>
+            <div class="navbar-right">
+                <a href="account.html"><img src="utilisateur.png"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="account-management">
+            <h2>Modifier vos Informations</h2>
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur">
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+
+            <button type="submit">Mettre à jour</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gérer votre Compte. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

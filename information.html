@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mes Compétences en Informatique</title>
+    <style>
+        /* Styles pour la barre de navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .navbar-left,
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-title {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.2);
+        }
+
+        .navbar img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Style pour le contenu de la page */
+        .profile {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile h2 {
+            margin-top: 15px;
+            font-size: 24px;
+        }
+
+        .profile p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .skills {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .skills h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .skills ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+        }
+
+        /* Style pour le pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img src="accueil.png" alt="Home"></a>
+                <a href="information.html"><img src="information.png"></a>
+            </div>
+            <h1 class="navbar-title">Mes Compétences en Informatique</h1>
+            <div class="navbar-right">
+                <a href="account.html"><img src="utilisateur.png"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <img src="perfil.jpg" alt="Photo de Profil" class="profile-photo">
+            <h2>Bienvenue sur ma page</h2>
+            <p>Découvrez mes compétences et mon expérience en informatique.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Développement Web</h2>
+            <ul>
+                <li><strong>HTML/CSS :</strong> Maîtrise des standards du web pour créer des interfaces utilisateurs élégantes et compatibles avec tous les navigateurs.</li>
+                <li><strong>JavaScript :</strong> Expertise dans la programmation en JavaScript pour ajouter des fonctionnalités interactives aux sites web, avec une expérience dans des frameworks tels que React.js et Vue.js.</li>
+                <li><strong>Backend Development :</strong> Compétences en développement côté serveur avec Node.js, Express, et PHP, ainsi qu'une connaissance approfondie des API RESTful.</li>
+                <li><strong>Responsive Design :</strong> Utilisation de frameworks comme Bootstrap et Tailwind pour créer des sites web qui s'adaptent parfaitement à tous les types d'appareils.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Compétences en Informatique. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
